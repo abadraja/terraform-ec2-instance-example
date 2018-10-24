@@ -16,9 +16,6 @@ resource "aws_instance" "example" {
 
   # the public SSH key
   key_name = "${aws_key_pair.mykeypair-hyperledger.key_name}"
-
-  user_data = "#!/bin/bash scripts/volumes.sh"
-
   
     provisioner "remote-exec" {
     inline = [
