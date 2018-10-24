@@ -4,6 +4,8 @@ variable "PATH_TO_PRIVATE_KEY" {
 variable "PATH_TO_PUBLIC_KEY" {
   default = "mykey-tit.pub"
 }
+variable "AWS_ACCESS_KEY_ID" {}
+variable "AWS_SECRET_ACCESS_KEY" {}
 variable "INSTANCE_DEVICE_NAME" {
   default = "test_jenkins"
 }
