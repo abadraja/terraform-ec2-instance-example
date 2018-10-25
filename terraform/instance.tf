@@ -13,15 +13,15 @@ resource "aws_instance" "example" {
   }
   # the security group
   vpc_security_group_ids = ["${aws_security_group.allow-ssh.id}"]
-
+  
   # the public SSH key
-  # key_name = "${aws_key_pair.mykeypair-hyperledger.key_name}"
+  key_name = "${aws_key_pair.mykeypair-hyperledger.key_name}"
 
-    provisioner "remote-exec" {
-    inline = [
-      "echo 'Hello'"
-    ]
-  } 
+    # provisioner "remote-exec" {
+    # inline = [
+    #   "echo 'Hello'"
+    # ]
+  # } 
 }
 
 resource "aws_ebs_volume" "ebs-volume-1" {
